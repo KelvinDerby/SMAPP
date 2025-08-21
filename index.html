@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Acres Blog - Modern Farming Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <div class="logo-img">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <span class="logo-text">Green Acres <span>Blog</span></span>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="search-btn" id="searchBtn"><i class="fas fa-search"></i></a></li>
+                    <li class="cart-icon">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="search-container" id="searchContainer">
+            <input type="text" placeholder="Search articles..." id="searchInput">
+            <button id="searchSubmit"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+     <section class="featured-section">
+            <div class="weather-widget">
+                <div class="weather-header">
+                    <span class="category-tag">Live Weather</span>
+                    <button class="weather-refresh" id="weatherRefresh">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+                
+                <div class="weather-content">
+                    <div class="weather-main">
+                        <div class="weather-icon">
+                            <i class="fas fa-sun" id="weatherIcon"></i>
+                        </div>
+                        <div class="weather-temp">
+                            <span id="currentTemp">24°C</span>
+                            <span class="weather-desc" id="weatherDesc">Sunny</span>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-details">
+                        <div class="weather-detail">
+                            <i class="fas fa-wind"></i>
+                            <span id="windSpeed">12 km/h</span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-tint"></i>
+                            <span id="humidity">65%</span>
+                        </div>
+                        <div class="weather-detail">
+                            <i class="fas fa-cloud-rain"></i>
+                            <span id="precipitation">10%</span>
+                        </div>
+                    </div>
+                </div>
+                
+            <div class="container">
+        <div class="dashboard-header">
+            <h1>Agriculture IOT Sensor Control Panel</h1>
+            <p>Monitor and control your farm sensors in real-time</p>
+        </div>
+        
+        <div class="sensor-grid">
+            <div class="sensor-card">
+                <div class="sensor-header">
+                    <div class="sensor-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="sensor-info">
+                        <h3>Irrigation System</h3>
+                        <p>Field Zone A</p>
+                    </div>
+                </div>
+                <div class="sensor-status">
+                    <div class="status-indicator">
+                        <div class="status-dot online"></div>
+                        <span>Online</span>
+                    </div>
+                    <div class="sensor-value">42% Moisture</div>
+                </div>
+                <div class="sensor-controls">
+                    <button class="control-btn btn-on active">
+                        <i class="fas fa-play"></i> ON
+                    </button>
+                    <button class="control-btn btn-off">
+                        <i class="fas fa-stop"></i> OFF
+                    </button>
+                    <button class="control-btn btn-auto">
+                        <i class="fas fa-cog"></i> AUTO
+                    </button>
+                </div>
+            </div>
+            
+            <div class="sensor-card">
+                <div class="sensor-header">
+                    <div class="sensor-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="sensor-info">
+                        <h3>Greenhouse Lights</h3>
+                        <p>Section B</p>
+                    </div>
+                </div>
+                <div class="sensor-status">
+                    <div class="status-indicator">
+                        <div class="status-dot online"></div>
+                        <span>Online</span>
+                    </div>
+                    <div class="sensor-value">65% Intensity</div>
+                </div>
+                <div class="sensor-controls">
+                    <button class="control-btn btn-on">
+                        <i class="fas fa-play"></i> ON
+                    </button>
+                    <button class="control-btn btn-off active">
+                        <i class="fas fa-stop"></i> OFF
+                    </button>
+                    <button class="control-btn btn-auto">
+                        <i class="fas fa-cog"></i> AUTO
+                    </button>
+                </div>
+            </div>
+            
+            <div class="sensor-card">
+                <div class="sensor-header">
+                    <div class="sensor-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="sensor-info">
+                        <h3>Ventilation System</h3>
+                        <p>Barn Complex</p>
+                    </div>
+                </div>
+                <div class="sensor-status">
+                    <div class="status-indicator">
+                        <div class="status-dot online"></div>
+                        <span>Online</span>
+                    </div>
+                    <div class="sensor-value">28°C Temp</div>
+                </div>
+                <div class="sensor-controls">
+                    <button class="control-btn btn-on">
+                        <i class="fas fa-play"></i> ON
+                    </button>
+                    <button class="control-btn btn-off">
+                        <i class="fas fa-stop"></i> OFF
+                    </button>
+                    <button class="control-btn btn-auto active">
+                        <i class="fas fa-cog"></i> AUTO
+                    </button>
+                </div>
+            </div>
+            
+            <div class="sensor-card">
+                <div class="sensor-header">
+                    <div class="sensor-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="sensor-info">
+                        <h3>Fertigation System</h3>
+                        <p>North Field</p>
+                    </div>
+                </div>
+                <div class="sensor-status">
+                    <div class="status-indicator">
+                        <div class="status-dot offline"></div>
+                        <span>Offline</span>
+                    </div>
+                    <div class="sensor-value">N/A</div>
+                </div>
+                <div class="sensor-controls">
+                    <button class="control-btn btn-on">
+                        <i class="fas fa-play"></i> ON
+                    </button>
+                    <button class="control-btn btn-off active">
+                        <i class="fas fa-stop"></i> OFF
+                    </button>
+                    <button class="control-btn btn-auto">
+                        <i class="fas fa-cog"></i> AUTO
+                    </button>
+                </div>
+            </div>
+        </div>
+                
+                <!-- <div class="weather-footer">
+                    <p class="post-meta">Weather for <span id="location">Farm Location</span> | Updated: <span id="updateTime">Just now</span></p>
+                    <a href="#articles" class="btn btn-primary">Read Article</a>
+                </div> -->
+            </div>
+        </section>
+
+    <section id="latest" class="latest-posts">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <span class="category-tag">Gardening</span>
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="#">Organic Vegetable Gardening for Beginners</a></h3>
+                        <p class="post-excerpt">Learn how to start your own organic vegetable garden with these simple steps...</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> Mark Williams</span>
+                            <span><i class="far fa-calendar"></i> June 2, 2023</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <span class="category-tag">Livestock</span>
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="#">Building the Perfect Chicken Coop</a></h3>
+                        <p class="post-excerpt">Our complete guide to designing and building a chicken coop that's predator-proof...</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> Emma Thompson</span>
+                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <span class="category-tag">Business</span>
+                    </div>
+                    <div class="post-content">
+                        <h3><a href="#">Maximizing Profits at Farmers Markets</a></h3>
+                        <p class="post-excerpt">Strategies to increase your sales and build customer loyalty at local markets...</p>
+                        <div class="post-meta">
+                            <span><i class="far fa-user"></i> James Wilson</span>
+                            <span><i class="far fa-calendar"></i> May 22, 2023</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="view-all">
+                <a href="#" class="btn btn-secondary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="farm-market">
+        <div class="container">
+            <h2 class="section-title">Farm Marketplace</h2>
+            <div class="market-tabs">
+                <button class="tab-btn active" data-tab="produce">Fresh Produce</button>
+                <button class="tab-btn" data-tab="equipment">Farm Equipment</button>
+            </div>
+            
+            <div class="market-content active" id="produce">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-details">
+                            <h3>Organic Tomatoes</h3>
+                            <p class="product-description">Freshly picked organic tomatoes from our greenhouse</p>
+                            <div class="product-meta">
+                                <span class="product-price">$3.99/lb</span>
+                                <span class="product-stock">In Stock: 50 lbs</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-egg"></i>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Free Range Eggs</h3>
+                            <p class="product-description">Farm fresh eggs from happy, free-range chickens</p>
+                            <div class="product-meta">
+                                <span class="product-price">$5.99/dozen</span>
+                                <span class="product-stock">In Stock: 20 dozen</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Organic Carrots</h3>
+                            <p class="product-description">Sweet and crunchy organic carrots, freshly harvested</p>
+                            <div class="product-meta">
+                                <span class="product-price">$2.49/lb</span>
+                                <span class="product-stock">In Stock: 35 lbs</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="market.html" class="btn btn-secondary">View All Produce</a>
+                </div>
+            </div>
+            
+            <div class="market-content" id="equipment">
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tractor"></i>
+                            </div>
+                            <span class="product-badge">Used</span>
+                        </div>
+                        <div class="product-details">
+                            <h3>John Deere Tractor</h3>
+                            <p class="product-description">2015 Model, 45HP, excellent condition</p>
+                            <div class="product-meta">
+                                <span class="product-price">$12,500</span>
+                                <span class="product-stock">1 Available</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Drip Irrigation Kit</h3>
+                            <p class="product-description">Complete 1/4 acre drip irrigation system</p>
+                            <div class="product-meta">
+                                <span class="product-price">$349.99</span>
+                                <span class="product-stock">In Stock: 5</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <h3>Professional Tool Set</h3>
+                            <p class="product-description">32-piece farming tool set with storage case</p>
+                            <div class="product-meta">
+                                <span class="product-price">$189.99</span>
+                                <span class="product-stock">In Stock: 8</span>
+                            </div>
+                            <button class="btn btn-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all">
+                    <a href="market.html" class="btn btn-secondary">View All Equipment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content">
+                    <h2>Join Our Farming Community</h2>
+                    <p>Get weekly farming tips, seasonal recipes, and exclusive content delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-categories">
+        <div class="container">
+            <h2 class="section-title">Popular Categories</h2>
+            <div class="categories-grid">
+                <a href="#categories" class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Organic Farming</h3>
+                </a>
+                <a href="#categories" class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Homesteading</h3>
+                </a>
+                <a href="#categories" class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Farm Equipment</h3>
+                </a>
+                <a href="#categories" class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Seasonal Recipes</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-tractor"></i>
+                        <span>Green Acres Blog</span>
+                    </div>
+                    <p>Sharing modern farming techniques, sustainable practices, and homesteading stories since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#recipes">Recipes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Gardening</a></li>
+                        <li><a href="#">Livestock</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Farm Business</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> hello@greenacresblog.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Countryside</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Green Acres Blog. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
