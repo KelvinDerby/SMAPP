@@ -495,10 +495,7 @@ nav ul li a:hover {
     grid-template-columns: repeat(4, minmax(0,1fr));
     gap: 12px;
   }
-  @media (max-width: 800px) {
-    .sensor-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  }
-  .sensor-card {
+.sensor-card {
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 8px;
@@ -507,34 +504,132 @@ nav ul li a:hover {
     background: transparent;
     color: #e8eaed;
     /* box-shadow: 0 1px 0 rgba(255,255,255,0.04), 0 8px 24px rgba(0,0,0,0.25) inset, 0 2px 12px rgba(0,0,0,0.3); */
-  }
-  .sensor-name { font-weight: 600; display: flex; align-items: center; gap: 8px; opacity: 0.9; }
-  .sensor-value {
+}
+.sensor-name { font-weight: 600; display: flex; align-items: center; gap: 8px; opacity: 0.9; 
+}
+.sensor-value {
     font-size: 1.6rem;
     font-variant-numeric: tabular-nums;
     line-height: 1;
     padding: 6px 0 2px;
-  }
-  .sensor-card.loading .sensor-value { opacity: 0.6; }
-  .sensor-read {
-    justify-self: start;
-    border: 0;
-    padding: 8px 12px;
-    border-radius: 10px;
-    background: #ffd166;
-    color: #2d3e21;
-    border: 2px solid #ffd166;
-    /* color: white; */
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.5s;
-  }
-.sensor-read:hover {
-    background: transparent;
-    color: #ffd166;
-    border-color: #ffd166;
 }
-  .sensor-read:disabled { opacity: 0.6; cursor: not-allowed; 
+.sensor-card.loading .sensor-value { opacity: 0.6; }
+/* Sensor read button */
+.sensor-read {
+    flex: 1;
+    margin: 0 5px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ffd166, #d4a017);
+    color: #2d3e21;
+}
+
+.sensor-read:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 209, 102, 0.6);
+}
+
+.sensor-read:active {
+    transform: scale(0.95);
+    background: linear-gradient(to right, #e6ba5c, #bc9014);
+}
+
+.sensor-read:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.sensor-read i {
+    margin-right: 8px;
+}
+
+/* Adjust sensor controls for mobile */
+.sensor-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .sensor-read {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0 3px;
+        min-width: 60px;
+    }
+
+    .sensor-read i {
+        margin-right: 6px;
+        font-size: 14px;
+    }
+
+    .sensor-read:hover {
+        transform: none; /* Disable hover scale on touch devices */
+        box-shadow: none;
+    }
+
+    .sensor-read:active {
+        transform: scale(0.95);
+        background: linear-gradient(to right, #e6ba5c, #bc9014);
+        box-shadow: 0 0 10px rgba(255, 209, 102, 0.4);
+    }
+
+    .sensor-controls {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 buttons per row */
+        gap: 6px;
+        padding: 5px;
+    }
+
+    .sensor-controls .control-btn {
+        padding: 8px 0;
+        font-size: 14px;
+        margin: 0;
+        min-width: 0;
+    }
+
+    .sensor-controls .control-btn i {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sensor-read {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .sensor-read i {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+
+    .sensor-controls {
+        grid-template-columns: 1fr; /* Stack buttons vertically on very small screens */
+        gap: 4px;
+    }
+
+    .sensor-controls .control-btn {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .sensor-controls .control-btn i {
+        font-size: 12px;
+        margin-right: 4px;
+    }
 }
 
 .weather-footer {
@@ -1186,4 +1281,29 @@ footer {
     .post-meta span {
         margin-bottom: 0.5rem;
     }
+}
+
+/* Actuator State Styling */
+.status-indicator .state {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ffd166;
+}
+
+/* Notification Styling */
+.notification {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
 }
