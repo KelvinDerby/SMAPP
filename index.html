@@ -15,16 +15,16 @@
                     <div class="logo-img">
                         <i class="fas fa-tractor"></i>
                     </div>
-                    <span class="logo-text">Green Acres <span>Blog</span></span>
+                    <span class="logo-text">SM<span>APP</span></span>
                 </a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                     <li><a href="#" class="search-btn" id="searchBtn"><i class="fas fa-search"></i></a></li>
                     <li class="cart-icon">
                         <a href="cart.html">
@@ -84,126 +84,110 @@
         </div>
         
         <div class="sensor-grid">
-            <div class="sensor-card">
-                <div class="sensor-header">
-                    <div class="sensor-icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="sensor-info">
-                        <h3>Irrigation System</h3>
-                        <p>Field Zone A</p>
-                    </div>
-                </div>
-                <div class="sensor-status">
-                    <div class="status-indicator">
-                        <div class="status-dot online"></div>
-                        <span>Online</span>
-                    </div>
-                    <div class="sensor-value">42% Moisture</div>
-                </div>
-                <div class="sensor-controls">
-                    <button class="control-btn btn-on active">
-                        <i class="fas fa-play"></i> ON
-                    </button>
-                    <button class="control-btn btn-off">
-                        <i class="fas fa-stop"></i> OFF
-                    </button>
-                    <button class="control-btn btn-auto">
-                        <i class="fas fa-cog"></i> AUTO
-                    </button>
-                </div>
+    <div class="sensor-card" data-state="on" data-endpoint="/api/irrigation" data-sensor="soilMoisture" data-unit="%">
+        <div class="sensor-header">
+            <div class="sensor-icon">
+                <i class="fas fa-tint"></i>
             </div>
-            
-            <div class="sensor-card">
-                <div class="sensor-header">
-                    <div class="sensor-icon">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div class="sensor-info">
-                        <h3>Greenhouse Lights</h3>
-                        <p>Section B</p>
-                    </div>
-                </div>
-                <div class="sensor-status">
-                    <div class="status-indicator">
-                        <div class="status-dot online"></div>
-                        <span>Online</span>
-                    </div>
-                    <div class="sensor-value">65% Intensity</div>
-                </div>
-                <div class="sensor-controls">
-                    <button class="control-btn btn-on">
-                        <i class="fas fa-play"></i> ON
-                    </button>
-                    <button class="control-btn btn-off active">
-                        <i class="fas fa-stop"></i> OFF
-                    </button>
-                    <button class="control-btn btn-auto">
-                        <i class="fas fa-cog"></i> AUTO
-                    </button>
-                </div>
-            </div>
-            
-            <div class="sensor-card">
-                <div class="sensor-header">
-                    <div class="sensor-icon">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="sensor-info">
-                        <h3>Ventilation System</h3>
-                        <p>Barn Complex</p>
-                    </div>
-                </div>
-                <div class="sensor-status">
-                    <div class="status-indicator">
-                        <div class="status-dot online"></div>
-                        <span>Online</span>
-                    </div>
-                    <div class="sensor-value">28°C Temp</div>
-                </div>
-                <div class="sensor-controls">
-                    <button class="control-btn btn-on">
-                        <i class="fas fa-play"></i> ON
-                    </button>
-                    <button class="control-btn btn-off">
-                        <i class="fas fa-stop"></i> OFF
-                    </button>
-                    <button class="control-btn btn-auto active">
-                        <i class="fas fa-cog"></i> AUTO
-                    </button>
-                </div>
-            </div>
-            
-            <div class="sensor-card">
-                <div class="sensor-header">
-                    <div class="sensor-icon">
-                        <i class="fas fa-spray-can"></i>
-                    </div>
-                    <div class="sensor-info">
-                        <h3>Fertigation System</h3>
-                        <p>North Field</p>
-                    </div>
-                </div>
-                <div class="sensor-status">
-                    <div class="status-indicator">
-                        <div class="status-dot offline"></div>
-                        <span>Offline</span>
-                    </div>
-                    <div class="sensor-value">N/A</div>
-                </div>
-                <div class="sensor-controls">
-                    <button class="control-btn btn-on">
-                        <i class="fas fa-play"></i> ON
-                    </button>
-                    <button class="control-btn btn-off active">
-                        <i class="fas fa-stop"></i> OFF
-                    </button>
-                    <button class="control-btn btn-auto">
-                        <i class="fas fa-cog"></i> AUTO
-                    </button>
-                </div>
+            <div class="sensor-info">
+                <h3>Irrigation System</h3>
+                <p>Field Zone A</p>
             </div>
         </div>
+        <div class="sensor-status">
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Online</span>
+                <span class="state">On</span>
+            </div>
+            <div class="sensor-value">42% Moisture</div>
+        </div>
+        <div class="sensor-controls">
+            <button class="control-btn btn-on active"><i class="fas fa-play"></i> On</button>
+            <button class="control-btn btn-off"><i class="fas fa-stop"></i> Off</button>
+            <button class="control-btn btn-auto"><i class="fas fa-cog"></i> Auto</button>
+            <button class="control-btn sensor-read"><i class="fas fa-sync-alt"></i> Read</button>
+        </div>
+    </div>
+    
+    <div class="sensor-card" data-state="off" data-endpoint="/api/lights" data-sensor="light" data-unit=" lux">
+        <div class="sensor-header">
+            <div class="sensor-icon">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div class="sensor-info">
+                <h3>Greenhouse Lights</h3>
+                <p>Section B</p>
+            </div>
+        </div>
+        <div class="sensor-status">
+            <div class="status-indicator">
+                <div class="status-dot offline"></div>
+                <span>Online</span>
+                <span class="state">Off</span>
+            </div>
+            <div class="sensor-value">65% Intensity</div>
+        </div>
+        <div class="sensor-controls">
+            <button class="control-btn btn-on"><i class="fas fa-play"></i> On</button>
+            <button class="control-btn btn-off active"><i class="fas fa-stop"></i> Off</button>
+            <button class="control-btn btn-auto"><i class="fas fa-cog"></i> Auto</button>
+            <button class="control-btn sensor-read"><i class="fas fa-sync-alt"></i> Read</button>
+        </div>
+    </div>
+    
+    <div class="sensor-card" data-state="auto" data-endpoint="/api/ventilation" data-sensor="temperature" data-unit="°C">
+        <div class="sensor-header">
+            <div class="sensor-icon">
+                <i class="fas fa-wind"></i>
+            </div>
+            <div class="sensor-info">
+                <h3>Ventilation System</h3>
+                <p>Barn Complex</p>
+            </div>
+        </div>
+        <div class="sensor-status">
+            <div class="status-indicator">
+                <div class="status-dot online"></div>
+                <span>Online</span>
+                <span class="state">Auto</span>
+            </div>
+            <div class="sensor-value">28°C Temp</div>
+        </div>
+        <div class="sensor-controls">
+            <button class="control-btn btn-on"><i class="fas fa-play"></i> On</button>
+            <button class="control-btn btn-off"><i class="fas fa-stop"></i> Off</button>
+            <button class="control-btn btn-auto active"><i class="fas fa-cog"></i> Auto</button>
+            <button class="control-btn sensor-read"><i class="fas fa-sync-alt"></i> Read</button>
+        </div>
+    </div>
+    
+    <div class="sensor-card" data-state="off" data-endpoint="/api/fertigation" data-sensor="nutrient" data-unit="">
+        <div class="sensor-header">
+            <div class="sensor-icon">
+                <i class="fas fa-spray-can"></i>
+            </div>
+            <div class="sensor-info">
+                <h3>Fertigation System</h3>
+                <p>North Field</p>
+            </div>
+        </div>
+        <div class="sensor-status">
+            <div class="status-indicator">
+                <div class="status-dot offline"></div>
+                <span>Offline</span>
+                <span class="state">Off</span>
+            </div>
+            <div class="sensor-value">N/A</div>
+        </div>
+        <div class="sensor-controls">
+            <button class="control-btn btn-on"><i class="fas fa-play"></i> On</button>
+            <button class="control-btn btn-off active"><i class="fas fa-stop"></i> Off</button>
+            <button class="control-btn btn-auto"><i class="fas fa-cog"></i> Auto</button>
+            <button class="control-btn sensor-read"><i class="fas fa-sync-alt"></i> Read</button>
+        </div>
+    </div>
+</div>
                 
                 <!-- <div class="weather-footer">
                     <p class="post-meta">Weather for <span id="location">Farm Location</span> | Updated: <span id="updateTime">Just now</span></p>
@@ -224,7 +208,7 @@
                         <span class="category-tag">Gardening</span>
                     </div>
                     <div class="post-content">
-                        <h3><a href="#">Organic Vegetable Gardening for Beginners</a></h3>
+                        <h3><a href="organic-vegetable-gardening.html">Organic Vegetable Gardening for Beginners</a></h3>
                         <p class="post-excerpt">Learn how to start your own organic vegetable garden with these simple steps...</p>
                         <div class="post-meta">
                             <span><i class="far fa-user"></i> Mark Williams</span>
@@ -242,7 +226,7 @@
                         <span class="category-tag">Livestock</span>
                     </div>
                     <div class="post-content">
-                        <h3><a href="#">Building the Perfect Chicken Coop</a></h3>
+                        <h3><a href="building-chicken-coop.html">Building the Perfect Chicken Coop</a></h3>
                         <p class="post-excerpt">Our complete guide to designing and building a chicken coop that's predator-proof...</p>
                         <div class="post-meta">
                             <span><i class="far fa-user"></i> Emma Thompson</span>
@@ -260,7 +244,7 @@
                         <span class="category-tag">Business</span>
                     </div>
                     <div class="post-content">
-                        <h3><a href="#">Maximizing Profits at Farmers Markets</a></h3>
+                        <h3><a href="maximizing-profits-farmers-markets (1).html">Maximizing Profits at Farmers Markets</a></h3>
                         <p class="post-excerpt">Strategies to increase your sales and build customer loyalty at local markets...</p>
                         <div class="post-meta">
                             <span><i class="far fa-user"></i> James Wilson</span>
@@ -271,7 +255,7 @@
                 </article>
             </div>
             <div class="view-all">
-                <a href="#" class="btn btn-secondary">View All Articles</a>
+                <a href="Articles.html" class="btn btn-secondary">View All Articles</a>
             </div>
         </div>
     </section>
@@ -457,7 +441,7 @@
                 <div class="footer-about">
                     <div class="footer-logo">
                         <i class="fas fa-tractor"></i>
-                        <span>Green Acres Blog</span>
+                        <span>SMAPP</span>
                     </div>
                     <p>Sharing modern farming techniques, sustainable practices, and homesteading stories since 2015.</p>
                     <div class="social-links">
@@ -471,10 +455,9 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#blog">Blog</a></li>
-                        <li><a href="#recipes">Recipes</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -495,7 +478,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Green Acres Blog. All rights reserved.</p>
+                <p>&copy; 2024 SMAPP. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -503,10 +486,10 @@
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="EK2ZR9FNbTwQjZ9c8VJAH";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
 </body>
 </html>
-
