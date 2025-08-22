@@ -246,6 +246,127 @@
             margin-bottom: 15px;
         }
 
+        /* Footer */
+footer {
+    background-color: #2a4d2a;
+    color: white;
+    padding: 4rem 0 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-about {
+    padding-right: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-logo i {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.footer-about p {
+    color: #d0e0d0;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.footer-links h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #d0e0d0;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    color: #d0e0d0;
+    font-size: 0.95rem;
+}
+
+.footer-contact i {
+    margin-right: 0.8rem;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    color: #d0e0d0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    color: #d0e0d0;
+    transition: color 0.3s;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
         @media (max-width: 768px) {
             .cart-container {
                 grid-template-columns: 1fr;
@@ -262,13 +383,14 @@
     </style>
 </head>
 <body>
+    
     <div class="container">
         <div class="header">
             <div class="logo">
                 <div class="logo-img">
                     <i class="fas fa-tractor"></i>
                 </div>
-                <div class="logo-text">Farm<span>Fresh</span></div>
+                <div class="logo-text">SM<span>APP</span></div>
             </div>
             <div class="cart-header">
                 <h1>Shopping Cart</h1>
@@ -302,11 +424,61 @@
                     <span id="grandTotal">$0.00</span>
                 </div>
                 <button class="btn-checkout">Proceed to Checkout</button>
-                <a href="#" class="continue-shopping">Continue Shopping</a>
+                <a href="market.html" class="continue-shopping">Continue Shopping</a>
             </div>
         </div>
     </div>
-
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-tractor"></i>
+                        <span>SMAPP</span>
+                    </div>
+                    <p>Sharing modern farming techniques, sustainable practices, and homesteading stories since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Gardening</a></li>
+                        <li><a href="#">Livestock</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Farm Business</a></li>
+                        <li><a href="#">DIY Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> hello@greenacresblog.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Countryside</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SMAPP. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         // Sample product data
         const products = [
@@ -435,4 +607,3 @@
 </script>
 </body>
 </html>
-
